@@ -1,0 +1,46 @@
+/* Font per tutto il testo  */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Font e colore blue per i titoli*/
+h1,h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0000ff;
+}
+/* dimensione logo */
+ header img {
+           width: 90px;
+           height: auto;
+ }
+ 
+           /* sfondo e stile */
+           header{
+           background-image: url('https://caffetteriasavelli.it/wp-content/uploads/2021/01/pasta-1440x960.jpg');
+           background-position:center;
+           background-size:  cover ;
+           color: #ffff;
+           padding: 40px 20px;
+           text-align: center;
+        
+ }
+
+ article {
+    width: 200px;
+    background-color: rgb(211, 211, 52);
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 15px;
+ }
+
+  article img{
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+  article:hover {
+           background-color: #0a97dd;
+           border-color: #000ff0;
+           
+           }
+ 
+
