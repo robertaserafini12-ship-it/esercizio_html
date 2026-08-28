@@ -1,12 +1,15 @@
-/* Font per tutto il testo  */
+/* Font per tutto il testo e spazio per la navbar fissa */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 60px;
 }
-/* Font e colore blue per i titoli*/
-h1,h2, h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color:#0000ff;
+
+/* Font e colore blue per i titoli */
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0000ff;
 }
+
 /* dimensione logo */
  header img {
            width: 90px;
@@ -102,7 +105,7 @@ footer {
  
 /* --- 1. NAVBAR FISSA IN ALTO  --- */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: #ffffff;
   z-index: 1000;
