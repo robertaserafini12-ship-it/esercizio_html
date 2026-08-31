@@ -1,59 +1,44 @@
+
 /* Font per tutto il testo e spazio per la navbar fissa */
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding-top: 60px;
+  margin: 0;
 }
 
-/* Font e colore blue per i titoli */
+/* Font e colore blu per i titoli */
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   color: #0000ff;
 }
 
-/* dimensione logo */
- header img {
-           width: 90px;
-           height: auto;
- }
- 
-           /* sfondo e stile */
-           header{
-           background-image: url('https://caffetteriasavelli.it/wp-content/uploads/2021/01/pasta-1440x960.jpg');
-           background-position:center;
-           background-size:  cover ;
-           color: #ffff;
-           padding: 40px 20px;
-           text-align: center;
-           display: flex;
-           flex-direction: column;
-        
- }
-
- article {
-    width: 200px;
-    background-color: rgb(211, 211, 52);
-    border: 1px solid #ddd;
-    margin: 20px auto;
-    padding: 15px;
- }
-
-  article img{
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-  }
-  article:hover {
-           background-color: #0a97dd;
-           border-color: #000ff0;
-           
-           }
-
-           /* --- 1. NAVBAR FLEXBOX --- */
+/* --- NAVBAR FISSA E FLEXBOX --- */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+/* Stile per il logo nella navbar */
+nav .logo {
+  width: auto;
+  height: 50px;
+}
+
+/* Contenitore e lista dei link nella nav */
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav ul {
@@ -64,7 +49,7 @@ nav ul {
   padding: 0;
 }
 
-/* --- 2. HOVER SUI LINK DELLA NAVBAR --- */
+/* Hover sui link della navbar */
 nav a {
   text-decoration: none;
   color: #333;
@@ -77,16 +62,21 @@ nav a:hover {
   border-bottom: 2px solid #0000ff;
 }
 
-/* --- 3. FLEX PER HEADER, ARTICLES E FOOTER --- */
-/* Modifica dell'header esistente per usare Flexbox */
+/* --- HEADER --- */
 header {
+  background-image: url('https://caffetteriasavelli.it/wp-content/uploads/2021/01/pasta-1440x960.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Contenitore per affiancare gli articoli */
+/* --- MAIN E SCHEDE ARTICOLO --- */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -95,38 +85,48 @@ main {
   padding: 20px;
 }
 
-/* Footer in Flexbox */
+article {
+  width: 200px;
+  background-color: rgb(211, 211, 52);
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+article:hover {
+  background-color: #0a97dd;
+  border-color: #000ff0;
+}
+
+/* --- FOOTER --- */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
- 
-/* --- 1. NAVBAR FISSA IN ALTO  --- */
-nav {
-  position: fixed;
-  top: 0;
-  background-color: #ffffff;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 
-/* --- 2. BOTTONE "TORNA SU" FISSO IN BASSO A DESTRA --- */
+/* --- BOTTONE "TORNA SU" --- */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999; /* Sta sempre sopra ogni altro elemento */
+  z-index: 9999;
 }
 
 .back-to-top img {
   width: 45px;
   height: 45px;
-  animation: bounce 2s infinite; /* Animazione opzionale */
+  animation: bounce 2s infinite;
 }
 
-/* Animazione */
+/* Animazione per il bottone torna su */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -139,14 +139,14 @@ nav {
   }
 }
 
-/* --- 3. MEDIA QUERY (RESPONSIVE PER SMARTPHONE/TABLET) --- */
+/* --- MEDIA QUERY (RESPONSIVE) --- */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 10px;
   }
 
-  nav ul {
+  nav ul, nav .nav-links {
     flex-direction: column;
     align-items: center;
     gap: 10px;
